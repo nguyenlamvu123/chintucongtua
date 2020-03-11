@@ -1,0 +1,16 @@
+﻿<html>
+
+<head>
+    <title>Soccer time results</title>
+</head>
+
+<body>
+    <ul>
+        {% for vote in votes %}
+        <li> {{ vote.voterName }} wants to play on {{ vote.choiceDay }} at {% if vote.choiceTime == '1' %} 08:00 {% else %} 20:00 {% endif %}</li>
+        {% endfor %}
+    </ul>
+    <a href='/'>Back to main page</a>
+</body>
+
+</html>
